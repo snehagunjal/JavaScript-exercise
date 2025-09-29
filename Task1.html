@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+</head>
+
+<body>
+    <script>
+        //1️⃣ Create an array named numbers with values [10, 20, 30, 40, 50] and print the
+        // second element.
+        let x = [10, 20, 30, 40, 50];
+        console.log(x[1]);
+        20
+
+        // 2️⃣ Add a value 60 at the end of the array using an array method and print the
+        // updated array.
+        x.push(60);
+        6
+        console.log(x);
+        [10, 20, 30, 40, 50, 60]
+
+        // 3️⃣ Remove the first element from the array and print the resulting array.
+        x.shift();
+        10
+        console.log(x);
+        [20, 30, 40, 50, 60]
+
+        // 4️⃣ Check if the value 30 exists in the array using an appropriate method and log true
+        // or false.
+        x.includes(30);
+        true
+
+        //5️⃣ Find the index of the element 40 in the array. What will it return if the element
+        // doesn’t exist?
+        x.indexOf(40);
+        2
+
+        //6️⃣ Convert the array to a string using the join() method and separate elements with &quot;
+        // | &quot;.
+        const string = x.join(" - ");
+        console.log(string);
+        20 - 30 - 40 - 50 - 60
+        undefined
+        typeof string
+        'string'
+
+        // 8️⃣ Reverse the array [1, 2, 3, 4, 5] and print the result.
+        x.reverse();
+        (5)[60, 50, 40, 30, 20]
+
+        // 7️⃣ Sort the array [5, 2, 9, 1, 10] in ascending order (numerically).
+        x.sort((a, b) => a - b);
+        (5)[20, 30, 40, 50, 60]
+
+        // 9️⃣ Merge two arrays [1, 2, 3] and [4, 5, 6] using concat() and store the result in a
+        // new array.
+        const arr1 = [6, 5, 4];
+        const arr2 = [3, 2, 1];
+        const arr3 = arr1.concat(arr2);
+        console.log(arr3)
+
+
+        /*🔟Use the slice() method to copy the first three elements from the array [10, 20, 30,
+        40, 50].*/
+        let fruits = ["apple", "banana", "cherry", "grapes", "dragonfruit"];
+        let slicedfriuts = fruits.slice(1, 4);
+        console.log("All the fruits: ", fruits);
+        console.log("Sliced fruits: ", slicedfriuts);
+
+        /*   1️⃣1️⃣  From the array [A, B, C, D;, E], remove 2 elements starting from index 1
+  using splice() and print both the removed elements and the updated array.*/
+        let alpha = ["A", "B", "C", "D", "E"];
+        let splicedalpha = alpha.splice(1, 2);
+        console.log("removed alphabets using splice: ", splicedalpha);
+        console.log("updated alpha: ", alpha);
+
+        /* 1️⃣2️⃣ In the same array, add &quot;X&quot; and &quot;Y&quot; at index 2 using splice() without removing
+      any elements. What is the final array?*/
+        let ex = [1, 2, 3, 4, "x", "y"];
+        let spliceex = ex.splice(4, 5, "x", "y");
+        console.log(ex)
+
+        let name = prompt("what is you name?");
+        name();
+
+      if (wanttocontinue){
+        document.write(`hello %{name}`);
+      }else{
+        document.write("Sorry, you are not continuing");
+      }
+
+    
+    </script>
+</body>
+
+</html>
