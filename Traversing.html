@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing</title>
+</head>
+
+<body>
+    <!-- Traversing Element -->
+    <ul>
+        <li id="intro">List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+        <li>List 4</li>
+        <li>List 5</li>
+    </ul>
+
+    <ul>Updated Parent Element</ul>
+
+    <ul id="parent">
+        <li>List A</li>
+        <li>List B</li>
+        <li>List C</li>
+        <li>List D</li>
+        <li>List E</li>
+    </ul>
+
+    <script>
+        //Selecting the parent element
+        let elm = document.getElementById("intro")
+        console.log(elm);
+
+        let parent = elm.parentElement;
+        parent.style.color = "red"
+
+        //selecting the child element
+        let child = document.getElementById("parent");
+
+        //First child
+        let fchild = child.firstElementChild;
+        fchild.style.color = "brown"
+
+        //next sibling
+        let nextsibling = fchild.nextElementSibling;
+        nextsibling.style.color = "pink"
+
+        //last child
+        let lchild = child.lastElementChild;
+        lchild.style.color = "yellow"
+
+        // firstElementChild;
+        // nextElementSibling;
+        // nextElementSibling.nextElementSibling;
+        // lastElementChild.
+    </script>
+</body>
+
+</html>

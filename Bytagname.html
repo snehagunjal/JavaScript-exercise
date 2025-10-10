@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    #div {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select_element_byid</title>
+</head>
+
+<body>
+    <div id="div">
+        <p>Paragraph 1</p>
+        <h2>Heading 2</h2>
+        <p>Paragraph 2</p>
+        <h2>Heading 3</h2>
+        <p>Paragraph 3</p>
+    </div>
+    <script>
+        //selecting element by id
+        let div = document.getElementById("div");
+        
+        let elm = div.getElementsByTagName("p")
+        console.log(elm);
+        elm[1].innerHTML;
+
+        for(let i = 0; i < elm.length; i++){
+            div.getElementsByTagName("p")[i].style.color = "yellow"
+            div.getElementsByTagName("p")[i].style.background  = "black"
+            div.getElementsByTagName("p")[i].style.padding = "10px"
+            div.getElementsByTagName("p")[i].style.textAlign = "center"
+
+            div.getElementsByTagName("p")[i].innerHTML = `updated ${i + 2}`;
+        }
+    </script>
+</body>
+
+</html>

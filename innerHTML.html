@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change innerHTML</title>
+</head>
+
+<body>
+    <p>InnerHTML is used to fetch the content of the element</p>
+    <div id="intro">
+        <p>p tag</p>
+        <p id="p2">Lorem maiores explicabo!</p>
+        <h2>Heading 2</h2>
+    </div>
+
+    <script>
+        let elm = document.getElementById("intro");
+        elm.innerHTML = "hi";
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Practice Task</title>
+</head>
+<body>
+  <h1 id="main-heading">Hello DOM!</h1>
+  <p class="info">This is a paragraph about DOM manipulation.</p>
+
+  <ul id="list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <img id="image" src="https://via.placeholder.com/150" alt="Placeholder Image">
+
+  <br><br>
+  <button onclick="changeHeading()">Change Heading</button>
+  <button onclick="changeColor()">Change Paragraph Color</button>
+  <button onclick="addListItem()">Add List Item</button>
+  <button onclick="hideImage()">Hide Image</button>
+
+  <script>
+    // 1️⃣ Change heading text using getElementById
+    function changeHeading() {
+      document.getElementById("main-heading").textContent = "DOM Updated Successfully!";
+    }
+
+    // 2️⃣ Change paragraph color using getElementsByClassName
+    function changeColor() {
+      let para = document.getElementsByClassName("info")[0];
+      para.style.color = "blue";
+    }
+
+    // 3️⃣ Add new list item using querySelector
+    function addListItem() {
+      let ul = document.querySelector("#list");
+      let newItem = document.createElement("li");
+      newItem.textContent = "ReactJS";
+      ul.appendChild(newItem);
+    }
+
+    // 4️⃣ Hide image using querySelector
+    function hideImage() {
+      document.querySelector("#image").style.display = "none";
+    }
+  </script>
+</body>
+</html>

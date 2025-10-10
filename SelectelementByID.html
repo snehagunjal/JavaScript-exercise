@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Selecting and updating elements in DOM</h1>
+
+    <!--Example 1: using ID-->
+    <ul>
+        <li>List 1</li>
+        <li id="second">
+            <p>Paragraph inside list 2.</p>
+            <h2>Heading inside list 2.</h2>
+        </li>
+        <li id="mynewId">List 3</li>
+    </ul>
+
+    <!--Example 2: Using class-->
+    <ul>
+        <li class="listitem">Anup</li>
+        <li class="listitem">Neha</li>
+        <li class="listitem">Yuvi</li>
+        <li class="listitem">Sai</li>
+        <li class="listitem">Champa</li>
+    </ul>
+
+    <script>
+        //--- Selecting by ID ---
+        let elmid = document.getElementById("second");
+        elmid.innerHTML = "<p>content updated successfully</p>";
+
+        //selecting by class name
+        let elmcls = document.getElementsByClassName("listitem");
+        for (let i = 0; i < elmcls.length; i++) {
+        elmcls[i].innerHTML= "updated to neha";
+        }
+
+        // updating a specific class element 
+        elmcls[1].innerHTML = "Not updating"
+    </script>
+</body>
+
+</html>

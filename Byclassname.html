@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Selecting and updating elements in Dom by class</h1>
+
+    <ul>
+        <li class="cl">Mango</li>
+        <li class="second">List 2</li>
+        <li class="cl">Papaya</li>
+        <li class="cl">Strawberry</li>
+        <li class="cl">Orange</li>
+    </ul>
+
+    <script>
+        let elm = document.getElementsByClassName("cl");
+        console.log(elm); // Output: HTMLCollection(2) [li.cl, li.cl]
+        console.log(elm[0]); // Output: <li class="cl">List 1</li>
+        console.log(elm[1]); // Output: <li class="cl">List 3</li>
+        console.log(elm[0].innerHTML); // Output: List 1
+        console.log(elm[1].innerHTML); // Output: List 3
+
+        //For class selector we use loop bcoz class can be multiple in a document
+        for (let i = 0; i < elm.length; i++) {
+            elm[i].innerHTML = "Hi"
+        }
+    </script>
+</body>
+
+</html>
