@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        border: 5px solid red;
+        height: 190px;
+        width: 150px;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <div id="box">
+        <p>This is a paragraph</p>
+    </div>
+</body>
+<script>
+let box = document.getElementById("box");
+
+//offset values(position of an element including padding and border)
+let width = box.offsetWidth;
+let height = box.offsetHeight;
+
+console.log(`total width with padding and border is ${width}`);
+console.log(`total height with padding and border is ${height}`);
+
+//client values position excluding padding and border 
+let width1  =box.clientWidth;
+let height1 = box.clientHeight;
+
+console.log(`total width without padding and border is ${width1}`);
+console.log(`total height without padding and border is ${height1}`);
+
+</script>
+</html>
