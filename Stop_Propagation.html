@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Propagation</title>
+    <style>
+        #outerdiv {
+            width: 300px;
+            height: 100px;
+            background-color: red;
+            padding: 20px;
+        }
+
+        #innerdiv {
+            width: 200px;
+            background-color: yellow;
+            padding: 10px;
+            margin: 20px 20px 20px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Stop Event Propagation in Javascript</h2>
+    <p>Event Propagation determines in which order the elements receive the event.</p>
+
+    <div id="outerdiv">Outer Div
+        <div id="innerdiv">
+            Inner Div
+        </div>
+    </div>
+    <script>
+        document.querySelector('body').addEventListener('click', (e) => {
+            console.log('body clicked');
+            e.stopPropagation();
+        });
+
+        document.querySelector('#outerdiv').addEventListener('click', (es) => {
+            console.log("outer clicked");
+            es.stopPropagation();
+        });
+
+        //inner div  click event with stopPropagation
+        document.querySelector('#innerdiv').addEventListener('click', (e) => {
+            console.log("inner div clicked");
+            e.stopPropagation();
+        })
+    </script>
+</body>
+
+</html>
